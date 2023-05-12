@@ -49,7 +49,7 @@ To learn more on how the API works on underneath check my blog post on [PDF-GPT:
 
 Example screenshot for a query based on the [sample document](https://github.com/pranav-kural/pdfgpt/blob/main/data/sample/SOP-for-Quality-Improvement.pdf):
 
-<img src="https://github.com/pranav-kural/pdfgpt/assets/17651852/dd1ee34b-c4e6-4556-a2d7-bc6afd621cd3" alt="sample query response" height=200/>
+<img src="https://github.com/pranav-kural/pdfgpt/assets/17651852/37b13154-7ac5-4698-a992-829c958f26ce" alt="sample query response" height=200/>
 
 ## To-be-implemented
 

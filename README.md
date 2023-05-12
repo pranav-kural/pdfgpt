@@ -15,7 +15,9 @@ OPENAI_API_KEY={Open AI API Key}
 PINECONE_KEY={Pinecone API Key}
 ```
 
-Then run the server using:
+Update Pinecone information (index name and region) and any other parameters in the `params.py` file.
+
+Then, run the server using:
 
     uvicorn main:app --reload
 

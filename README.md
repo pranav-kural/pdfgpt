@@ -36,6 +36,12 @@ Below is a brief overview of what happens when user makes a query:
 4. Chat completion request is made to Chat model (ex, OpenAI GPT 3.5 turbo) by providing it the content related to the query as context and the query itself
 5. Response returned
 
+## Screenshots
+
+Example screenshots:
+
+![CDB402A4-4CAE-41FD-A027-40A3860C6F35](https://github.com/pranav-kural/pdfgpt/assets/17651852/dd1ee34b-c4e6-4556-a2d7-bc6afd621cd3)
+
 ## To-be-implemented
 
 - Add authentication, API Key and user management to the API

@@ -43,6 +43,8 @@ Below is a brief overview of what happens when user makes a query:
 4. Chat completion request is made to Chat model (ex, OpenAI GPT 3.5 turbo) by providing it the content related to the query as context and the query itself
 5. Response returned
 
+To learn more on how the API works on underneath check my blog post on [PDF-GPT: LlamaIndex + Open AI + Pinecone + FastAPI](https://www.pkural.ca/blog/posts/pdf-gpt/)
+
 ## Screenshots
 
 Example screenshot for a query based on the [sample document](https://github.com/pranav-kural/pdfgpt/blob/main/data/sample/SOP-for-Quality-Improvement.pdf):

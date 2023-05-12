@@ -10,7 +10,8 @@ from llama_index import (
 )
 from llama_index.vector_stores import PineconeVectorStore
 from llama_index.storage.storage_context import StorageContext
-from langchain.llms import OpenAI
+from langchain.chat_models import ChatOpenAI
+from langchain.embeddings import OpenAIEmbeddings
 import pinecone
 
 from file_utils import download_pdf, clear_source_file_contents, delete_source_file
@@ -53,7 +54,7 @@ def create_index(document_url):
 
     # LLM Predictor
     llm_predictor = LLMPredictor(
-        llm=OpenAI(temperature=P_EMBEDDING_TEMPERATURE, model_name=P_EMBEDDING_MODEL, max_tokens=P_EMBEDDING_MAX_TOKENS)
+        llm=OpenAIEmbeddings(temperature=P_EMBEDDING_TEMPERATURE, model_name=P_EMBEDDING_MODEL, max_tokens=P_EMBEDDING_MAX_TOKENS)
     )
     service_context = ServiceContext.from_defaults(llm_predictor=llm_predictor)
 
@@ -81,7 +82,7 @@ def create_index(document_url):
 
     # create chat LLM predictor - may use different model
     chat_llm_predictor = LLMPredictor(
-        llm=OpenAI(temperature=P_CHAT_TEMPERATURE, model_name=P_CHAT_MODEL, max_tokens=P_CHAT_MAX_TOKENS)
+        llm=ChatOpenAI(temperature=P_CHAT_TEMPERATURE, model_name=P_CHAT_MODEL, max_tokens=P_CHAT_MAX_TOKENS)
     )
     chat_service_context = ServiceContext.from_defaults(llm_predictor=chat_llm_predictor)
 
@@ -99,7 +100,7 @@ def load_index():
 
     # LLM Predictor - uses chat model since only loading index not creating
     llm_predictor = LLMPredictor(
-        llm=OpenAI(temperature=P_CHAT_TEMPERATURE, model_name=P_CHAT_MODEL, max_tokens=P_CHAT_MAX_TOKENS)
+        llm=ChatOpenAI(temperature=P_CHAT_TEMPERATURE, model_name=P_CHAT_MODEL, max_tokens=P_CHAT_MAX_TOKENS)
     )
     service_context = ServiceContext.from_defaults(llm_predictor=llm_predictor)
 

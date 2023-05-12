@@ -8,6 +8,13 @@ Easiest way would be to run the app locally by cloning the repo:
 
      git clone https://github.com/pranav-kural/pdfgpt.git
 
+Add a `.env` file with your Open AI and Pinecone API keys (or add these values to `.env_sample` and rename it to `.env`)
+
+```.env
+OPENAI_API_KEY={Open AI API Key}
+PINECONE_KEY={Pinecone API Key}
+```
+
 Then run the server using:
 
     uvicorn main:app --reload

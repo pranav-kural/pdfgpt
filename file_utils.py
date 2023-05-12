@@ -5,16 +5,22 @@ import os
 import shutil
 import requests
 
-def clear_documents_directory():
+def clear_source_file_contents(file_path):
     """
-    method to clear documents directory
+    method to clear the contents of the source file
+    :param file_path: path of the file
     """
-    # clear documents directory
-    if os.path.exists('data/documents'):
-        shutil.rmtree('data/documents')
-        os.makedirs('data/documents')
-    else:
-        os.makedirs('data/documents')
+    with open(file_path, "w") as f:
+        f.write("")
+
+# delete the source file
+def delete_source_file(file_path):
+    """
+    method to delete the source file
+    :param file_path: path of the file
+    """
+    if os.path.exists(file_path):
+        os.remove(file_path)
 
 def download_pdf(url, file_path):
     """
@@ -22,7 +28,7 @@ def download_pdf(url, file_path):
     :param url: URL of PDF document
     """
     # Obtain response
-    response = requests.get(url)
+    response = requests.get(url, stream=True, timeout=10)
 
     # Save the file
     if response.status_code == 200:

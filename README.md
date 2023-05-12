@@ -38,9 +38,9 @@ Below is a brief overview of what happens when user makes a query:
 
 ## Screenshots
 
-Example screenshots:
+Example screenshot for a query based on the [sample document](https://github.com/pranav-kural/pdfgpt/blob/main/data/sample/SOP-for-Quality-Improvement.pdf):
 
-![CDB402A4-4CAE-41FD-A027-40A3860C6F35](https://github.com/pranav-kural/pdfgpt/assets/17651852/dd1ee34b-c4e6-4556-a2d7-bc6afd621cd3)
+<img src="https://github.com/pranav-kural/pdfgpt/assets/17651852/dd1ee34b-c4e6-4556-a2d7-bc6afd621cd3" alt="sample query response" height=200/>
 
 ## To-be-implemented
 
